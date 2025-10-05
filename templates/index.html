@@ -1,0 +1,56 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<form method="get" class="flex flex-wrap gap-3 mb-6 items-center">
+  <input type="text" name="search" value="{{search}}" placeholder="Search models..." class="border rounded px-3 py-2 flex-grow">
+  
+  <select name="brand" class="border rounded px-3 py-2">
+    <option value="">All Brands</option>
+    {% for b in brands %}
+      <option value="{{b}}" {% if b==selected_brand %}selected{% endif %}>{{b}}</option>
+    {% endfor %}
+  </select>
+
+  <select name="fuel" class="border rounded px-3 py-2">
+    <option value="">All Fuel Types</option>
+    {% for f in fuels %}
+      <option value="{{f}}" {% if f==selected_fuel %}selected{% endif %}>{{f}}</option>
+    {% endfor %}
+  </select>
+
+  <select name="sort" class="border rounded px-3 py-2">
+    <option value="asc" {% if sort_order=='asc' %}selected{% endif %}>Sort A-Z</option>
+    <option value="desc" {% if sort_order=='desc' %}selected{% endif %}>Sort Z-A</option>
+  </select>
+
+  <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-900 transition">Apply</button>
+</form>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  {% for m in model_cards %}
+  <a href="/model/{{m['model_url']}}" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    {% if m.popular %}
+    <div class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Popular</div>
+    {% endif %}
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">{{m.brand}} {{m.model}}</h2>
+      <p class="text-gray-600 text-sm">GVW: {{m.gvw}} | Fuel: {{m.fuel}}</p>
+      <p class="text-gray-600 text-sm">Mileage: {{m.mileage}} | HP: {{m.power}}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<div class="flex justify-center mt-6 gap-2">
+  {% if page>1 %}
+  <a href="?search={{search}}&brand={{selected_brand}}&fuel={{selected_fuel}}&sort={{sort_order}}&page={{page-1}}" class="px-3 py-1 border rounded hover:bg-gray-200">Prev</a>
+  {% endif %}
+  <span class="px-3 py-1 border rounded bg-gray-200">{{page}}</span>
+  {% if page<total_pages %}
+  <a href="?search={{search}}&brand={{selected_brand}}&fuel={{selected_fuel}}&sort={{sort_order}}&page={{page+1}}" class="px-3 py-1 border rounded hover:bg-gray-200">Next</a>
+  {% endif %}
+</div>
+
+{% endblock %}

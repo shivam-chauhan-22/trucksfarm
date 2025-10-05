@@ -1,0 +1,2151 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Truck Catalog v5</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<nav class="bg-blue-800 p-4 text-white font-bold text-xl shadow">
+  🚚 Truck Catalog v5
+  <a href="/brands" class="ml-6 underline text-sm font-normal">Brands</a>
+</nav>
+
+<div class="container mx-auto p-4">
+  
+
+<form method="get" class="flex flex-wrap gap-3 mb-6 items-center">
+  <input type="text" name="search" value="" placeholder="Search models..." class="border rounded px-3 py-2 flex-grow">
+  
+  <select name="brand" class="border rounded px-3 py-2">
+    <option value="">All Brands</option>
+    
+      <option value="1.3 LX" >1.3 LX</option>
+    
+      <option value="1.3 MXi" >1.3 MXi</option>
+    
+      <option value="1.3 SXi" >1.3 SXi</option>
+    
+      <option value="1.3 VXi" >1.3 VXi</option>
+    
+      <option value="1.3 VXi AC" >1.3 VXi AC</option>
+    
+      <option value="1.4 LX" >1.4 LX</option>
+    
+      <option value="1.4 MXi" >1.4 MXi</option>
+    
+      <option value="1.4 VXi" >1.4 VXi</option>
+    
+      <option value="1.4 XXL SD V2 CNG" >1.4 XXL SD V2 CNG</option>
+    
+      <option value="1.4 XXL SD V4 (A) CNG" >1.4 XXL SD V4 (A) CNG</option>
+    
+      <option value="1.5 LX" >1.5 LX</option>
+    
+      <option value="1.5 MXi" >1.5 MXi</option>
+    
+      <option value="1.5 VXi" >1.5 VXi</option>
+    
+      <option value="1.5XL SD V2" >1.5XL SD V2</option>
+    
+      <option value="1.5XXL HD V2" >1.5XXL HD V2</option>
+    
+      <option value="1.5XXL SD V2" >1.5XXL SD V2</option>
+    
+      <option value="1.5XXL SD V4" >1.5XXL SD V4</option>
+    
+      <option value="1.5XXL SD V6" >1.5XXL SD V6</option>
+    
+      <option value="1.6XL SD V2" >1.6XL SD V2</option>
+    
+      <option value="1.6XXL HD V2" >1.6XXL HD V2</option>
+    
+      <option value="1.6XXL SD V2" >1.6XXL SD V2</option>
+    
+      <option value="1.6XXL SD V4" >1.6XXL SD V4</option>
+    
+      <option value="1.6XXL SD V6" >1.6XXL SD V6</option>
+    
+      <option value="1.7 LX" >1.7 LX</option>
+    
+      <option value="1.7 LX CBC" >1.7 LX CBC</option>
+    
+      <option value="1.7 VXi AC" >1.7 VXi AC</option>
+    
+      <option value="1.7L LX" >1.7L LX</option>
+    
+      <option value="1.7L SXi AC" >1.7L SXi AC</option>
+    
+      <option value="1.9 CNG" >1.9 CNG</option>
+    
+      <option value="10 CuM Box Body" >10 CuM Box Body</option>
+    
+      <option value="10.5 CuM Box Body" >10.5 CuM Box Body</option>
+    
+      <option value="10x2 STD" >10x2 STD</option>
+    
+      <option value="10x4 Bogie" >10x4 Bogie</option>
+    
+      <option value="10x4 STD" >10x4 STD</option>
+    
+      <option value="1200" >1200</option>
+    
+      <option value="1200 4X4" >1200 4X4</option>
+    
+      <option value="14 CuM Scoop HARDOX Body" >14 CuM Scoop HARDOX Body</option>
+    
+      <option value="14 cum" >14 cum</option>
+    
+      <option value="1500" >1500</option>
+    
+      <option value="16 cum" >16 cum</option>
+    
+      <option value="16CuM Box Body" >16CuM Box Body</option>
+    
+      <option value="1700" >1700</option>
+    
+      <option value="18 cum" >18 cum</option>
+    
+      <option value="1950/CNG" >1950/CNG</option>
+    
+      <option value="2.0L LX" >2.0L LX</option>
+    
+      <option value="2.0L LX CBC" >2.0L LX CBC</option>
+    
+      <option value="2.0L VXi AC" >2.0L VXi AC</option>
+    
+      <option value="20 cum" >20 cum</option>
+    
+      <option value="2100/CLB" >2100/CLB</option>
+    
+      <option value="2100/Diesel" >2100/Diesel</option>
+    
+      <option value="2100/Flatbed" >2100/Flatbed</option>
+    
+      <option value="22 cum" >22 cum</option>
+    
+      <option value="2450/CNG" >2450/CNG</option>
+    
+      <option value="2450/High Deck Body" >2450/High Deck Body</option>
+    
+      <option value="2515/High Deck" >2515/High Deck</option>
+    
+      <option value="2515/Low Side Deck" >2515/Low Side Deck</option>
+    
+      <option value="2580/CBC" >2580/CBC</option>
+    
+      <option value="2580/Diesel" >2580/Diesel</option>
+    
+      <option value="2590/CBC" >2590/CBC</option>
+    
+      <option value="2590/CBC/i3" >2590/CBC/i3</option>
+    
+      <option value="2590/CBC/i4" >2590/CBC/i4</option>
+    
+      <option value="2590/FSD" >2590/FSD</option>
+    
+      <option value="2590/FSD/i3" >2590/FSD/i3</option>
+    
+      <option value="2590/FSD/i4" >2590/FSD/i4</option>
+    
+      <option value="2590/HSD" >2590/HSD</option>
+    
+      <option value="2590/HSD/i3" >2590/HSD/i3</option>
+    
+      <option value="2590/HSD/i4" >2590/HSD/i4</option>
+    
+      <option value="2590/LS" >2590/LS</option>
+    
+      <option value="2590/LX" >2590/LX</option>
+    
+      <option value="2654/CBC/Box Body" >2654/CBC/Box Body</option>
+    
+      <option value="2670/CBC" >2670/CBC</option>
+    
+      <option value="2670/CBC/2.8 Cum" >2670/CBC/2.8 Cum</option>
+    
+      <option value="2670/DSD" >2670/DSD</option>
+    
+      <option value="2670/DSD/2.8 Cum" >2670/DSD/2.8 Cum</option>
+    
+      <option value="2670/FBT/2.8 Cum" >2670/FBT/2.8 Cum</option>
+    
+      <option value="2670/FSD" >2670/FSD</option>
+    
+      <option value="2670/HSD" >2670/HSD</option>
+    
+      <option value="2685/FSD/10 ft" >2685/FSD/10 ft</option>
+    
+      <option value="2685/HSD/10 ft" >2685/HSD/10 ft</option>
+    
+      <option value="2775/Tipper" >2775/Tipper</option>
+    
+      <option value="2815 CAB" >2815 CAB</option>
+    
+      <option value="2815/10.8 ft" >2815/10.8 ft</option>
+    
+      <option value="2815/11.4 ft" >2815/11.4 ft</option>
+    
+      <option value="2815/CAB" >2815/CAB</option>
+    
+      <option value="2815/Cab. High Side Deck (10 ft)" >2815/Cab. High Side Deck (10 ft)</option>
+    
+      <option value="2815/Cab. High Side Deck (11.5 ft)" >2815/Cab. High Side Deck (11.5 ft)</option>
+    
+      <option value="2815/Cab. Low Side Deck (10 ft)" >2815/Cab. Low Side Deck (10 ft)</option>
+    
+      <option value="2815/Cab. Low Side Deck (11.5 ft)" >2815/Cab. Low Side Deck (11.5 ft)</option>
+    
+      <option value="2815/High Side Deck (14 ft)" >2815/High Side Deck (14 ft)</option>
+    
+      <option value="2815/Low Side Deck (12 ft)" >2815/Low Side Deck (12 ft)</option>
+    
+      <option value="2820/FSD/11 ft" >2820/FSD/11 ft</option>
+    
+      <option value="2820/HSD/11 ft" >2820/HSD/11 ft</option>
+    
+      <option value="2850/CBC" >2850/CBC</option>
+    
+      <option value="2850/CBC/12 ft" >2850/CBC/12 ft</option>
+    
+      <option value="2850/Fully built" >2850/Fully built</option>
+    
+      <option value="29 CuM Box Body" >29 CuM Box Body</option>
+    
+      <option value="2900/Delivery Van" >2900/Delivery Van</option>
+    
+      <option value="2900/Eutectic Van" >2900/Eutectic Van</option>
+    
+      <option value="2935/CBC" >2935/CBC</option>
+    
+      <option value="2935/CBC/5 Cum" >2935/CBC/5 Cum</option>
+    
+      <option value="2935/Composite Container" >2935/Composite Container</option>
+    
+      <option value="2935/DSD" >2935/DSD</option>
+    
+      <option value="2935/DSD/4.5 Cum" >2935/DSD/4.5 Cum</option>
+    
+      <option value="2935/Diesel" >2935/Diesel</option>
+    
+      <option value="2935/FBT/4.5 Cum" >2935/FBT/4.5 Cum</option>
+    
+      <option value="2935/HSD" >2935/HSD</option>
+    
+      <option value="2935/MS Container" >2935/MS Container</option>
+    
+      <option value="2950/CAB" >2950/CAB</option>
+    
+      <option value="2950/CAB/4 Tyre" >2950/CAB/4 Tyre</option>
+    
+      <option value="2950/CAB/6 Tyre" >2950/CAB/6 Tyre</option>
+    
+      <option value="2950/CAB/DCR29CBC 100B6M5" >2950/CAB/DCR29CBC 100B6M5</option>
+    
+      <option value="2950/HDLB/4" >2950/HDLB/4</option>
+    
+      <option value="2950/HDLB/6 Tyre" >2950/HDLB/6 Tyre</option>
+    
+      <option value="2950/HSD" >2950/HSD</option>
+    
+      <option value="2950/HSD/DCR29CBC 100B6M5" >2950/HSD/DCR29CBC 100B6M5</option>
+    
+      <option value="2990/CBC" >2990/CBC</option>
+    
+      <option value="2WD Power Steering" >2WD Power Steering</option>
+    
+      <option value="3.5T" >3.5T</option>
+    
+      <option value="3000/CBC" >3000/CBC</option>
+    
+      <option value="3000/Tipper" >3000/Tipper</option>
+    
+      <option value="3014/4WD/CBC" >3014/4WD/CBC</option>
+    
+      <option value="3014/4WD/Power Steering" >3014/4WD/Power Steering</option>
+    
+      <option value="3014/BS VI" >3014/BS VI</option>
+    
+      <option value="3050/Electric" >3050/Electric</option>
+    
+      <option value="3100/6.5m3/Box &amp; Rock" >3100/6.5m3/Box &amp; Rock</option>
+    
+      <option value="3100/CAB" >3100/CAB</option>
+    
+      <option value="3150/BS VI" >3150/BS VI</option>
+    
+      <option value="3150/EX Crew Cab" >3150/EX Crew Cab</option>
+    
+      <option value="3150/Ex Single Cab" >3150/Ex Single Cab</option>
+    
+      <option value="3160/7 Cu.m Box" >3160/7 Cu.m Box</option>
+    
+      <option value="3160/CBC" >3160/CBC</option>
+    
+      <option value="3160/Tipper" >3160/Tipper</option>
+    
+      <option value="32/4.5 CuM Box Body BSIV" >32/4.5 CuM Box Body BSIV</option>
+    
+      <option value="3200/CBC" >3200/CBC</option>
+    
+      <option value="3250/CBC" >3250/CBC</option>
+    
+      <option value="3250/CBC/14 ft" >3250/CBC/14 ft</option>
+    
+      <option value="3250/DSD/14 ft" >3250/DSD/14 ft</option>
+    
+      <option value="3250/Fully built" >3250/Fully built</option>
+    
+      <option value="3250/HSD/14 ft" >3250/HSD/14 ft</option>
+    
+      <option value="3264/2WD/CBC" >3264/2WD/CBC</option>
+    
+      <option value="3264/2WD/Manual Steering" >3264/2WD/Manual Steering</option>
+    
+      <option value="3264/2WD/Power Steering" >3264/2WD/Power Steering</option>
+    
+      <option value="3300/CAB" >3300/CAB</option>
+    
+      <option value="3300/CBC" >3300/CBC</option>
+    
+      <option value="3305/CBC" >3305/CBC</option>
+    
+      <option value="3305/HSD" >3305/HSD</option>
+    
+      <option value="3310/CAB/DCR29CBC 100B6M5" >3310/CAB/DCR29CBC 100B6M5</option>
+    
+      <option value="3310/HSD/DCR29CBC 100B6M5" >3310/HSD/DCR29CBC 100B6M5</option>
+    
+      <option value="3320" >3320</option>
+    
+      <option value="3320/CAB" >3320/CAB</option>
+    
+      <option value="3320/FSD/14 ft" >3320/FSD/14 ft</option>
+    
+      <option value="3320/HSD/14 ft" >3320/HSD/14 ft</option>
+    
+      <option value="3335 14ft" >3335 14ft</option>
+    
+      <option value="3335/CAB" >3335/CAB</option>
+    
+      <option value="3335/Dual Cab" >3335/Dual Cab</option>
+    
+      <option value="3335/FSD/14 ft" >3335/FSD/14 ft</option>
+    
+      <option value="3335/HSD/14 ft" >3335/HSD/14 ft</option>
+    
+      <option value="3335/High Deck (14 ft)" >3335/High Deck (14 ft)</option>
+    
+      <option value="3335/High Side Deck" >3335/High Side Deck</option>
+    
+      <option value="3335/Low Side Deck" >3335/Low Side Deck</option>
+    
+      <option value="3335/Semi High Deck (14 ft)" >3335/Semi High Deck (14 ft)</option>
+    
+      <option value="3350/CBC PTO" >3350/CBC PTO</option>
+    
+      <option value="3350/CBC/6.5 Cum" >3350/CBC/6.5 Cum</option>
+    
+      <option value="3350/FBT/6.5 Cum" >3350/FBT/6.5 Cum</option>
+    
+      <option value="3350/FET - Box Body" >3350/FET - Box Body</option>
+    
+      <option value="3350/FET - DSD" >3350/FET - DSD</option>
+    
+      <option value="3360/CAB/14.6(ft)" >3360/CAB/14.6(ft)</option>
+    
+      <option value="3360/CBC" >3360/CBC</option>
+    
+      <option value="3360/Electric" >3360/Electric</option>
+    
+      <option value="3370/CBC" >3370/CBC</option>
+    
+      <option value="3370/DSD" >3370/DSD</option>
+    
+      <option value="3370/Diesel" >3370/Diesel</option>
+    
+      <option value="3370/FSD" >3370/FSD</option>
+    
+      <option value="3370/HSD" >3370/HSD</option>
+    
+      <option value="3400 CAB" >3400 CAB</option>
+    
+      <option value="3400 Cowl" >3400 Cowl</option>
+    
+      <option value="3400/CAB" >3400/CAB</option>
+    
+      <option value="3400/CAB/4x2" >3400/CAB/4x2</option>
+    
+      <option value="3400/CBC" >3400/CBC</option>
+    
+      <option value="3400/CBC/14 ft" >3400/CBC/14 ft</option>
+    
+      <option value="3400/Cowl" >3400/Cowl</option>
+    
+      <option value="3400/DSD/14 ft" >3400/DSD/14 ft</option>
+    
+      <option value="3400/FSD/14 ft" >3400/FSD/14 ft</option>
+    
+      <option value="3400/HSD" >3400/HSD</option>
+    
+      <option value="3400/HSD/14 ft" >3400/HSD/14 ft</option>
+    
+      <option value="3400/Tipper" >3400/Tipper</option>
+    
+      <option value="3440/CBC/14 ft" >3440/CBC/14 ft</option>
+    
+      <option value="3440/DSD/14 ft" >3440/DSD/14 ft</option>
+    
+      <option value="3440/FSD/14 ft" >3440/FSD/14 ft</option>
+    
+      <option value="3440/HSD/14 ft" >3440/HSD/14 ft</option>
+    
+      <option value="3450/CBC" >3450/CBC</option>
+    
+      <option value="3550 CAB" >3550 CAB</option>
+    
+      <option value="3550 HSD" >3550 HSD</option>
+    
+      <option value="3550/CAB/DCR29CBC 100B6M5" >3550/CAB/DCR29CBC 100B6M5</option>
+    
+      <option value="3550/CBC" >3550/CBC</option>
+    
+      <option value="3550/HSD" >3550/HSD</option>
+    
+      <option value="3550/HSD/DCR29CBC 100B6M5" >3550/HSD/DCR29CBC 100B6M5</option>
+    
+      <option value="3590+1300/14 CuM Rock Body" >3590+1300/14 CuM Rock Body</option>
+    
+      <option value="3590+1300/16 CuM Box Body" >3590+1300/16 CuM Box Body</option>
+    
+      <option value="3590+1300/TGD/ Transit Mixer" >3590+1300/TGD/ Transit Mixer</option>
+    
+      <option value="3600/10.5m3/Box" >3600/10.5m3/Box</option>
+    
+      <option value="3600/12m3/Box" >3600/12m3/Box</option>
+    
+      <option value="3600/8.5m3/Box &amp; Rock" >3600/8.5m3/Box &amp; Rock</option>
+    
+      <option value="3600/CAB" >3600/CAB</option>
+    
+      <option value="3600/CBC" >3600/CBC</option>
+    
+      <option value="3600/Tipper" >3600/Tipper</option>
+    
+      <option value="3635/10.5 Cum Box" >3635/10.5 Cum Box</option>
+    
+      <option value="3635/7 Cum Rock" >3635/7 Cum Rock</option>
+    
+      <option value="3635/8.5 Cum Box" >3635/8.5 Cum Box</option>
+    
+      <option value="3635/CBC" >3635/CBC</option>
+    
+      <option value="3750/CAB" >3750/CAB</option>
+    
+      <option value="3760/CAB/17(ft)" >3760/CAB/17(ft)</option>
+    
+      <option value="3760/CBC" >3760/CBC</option>
+    
+      <option value="3770/CBC" >3770/CBC</option>
+    
+      <option value="3770/CBC 14 ft" >3770/CBC 14 ft</option>
+    
+      <option value="3770/CBC 16 ft" >3770/CBC 16 ft</option>
+    
+      <option value="3770/CBC/16ft" >3770/CBC/16ft</option>
+    
+      <option value="3770/DSD" >3770/DSD</option>
+    
+      <option value="3770/FSD" >3770/FSD</option>
+    
+      <option value="3770/HSD" >3770/HSD</option>
+    
+      <option value="3770/HSD 14 fT" >3770/HSD 14 fT</option>
+    
+      <option value="3770/HSD 16 ft" >3770/HSD 16 ft</option>
+    
+      <option value="3770/HSD/16ft" >3770/HSD/16ft</option>
+    
+      <option value="3778/CAB" >3778/CAB</option>
+    
+      <option value="3800/CAB" >3800/CAB</option>
+    
+      <option value="3800/HD" >3800/HD</option>
+    
+      <option value="3850/Electric" >3850/Electric</option>
+    
+      <option value="3880/6 M3 Transit Mixer Drum" >3880/6 M3 Transit Mixer Drum</option>
+    
+      <option value="3880/7 M3 Transit Mixer Drum" >3880/7 M3 Transit Mixer Drum</option>
+    
+      <option value="3880/7 m3 Transit Mixer Drum" >3880/7 m3 Transit Mixer Drum</option>
+    
+      <option value="3880/7m3 Transit Mixer" >3880/7m3 Transit Mixer</option>
+    
+      <option value="3885/CAB" >3885/CAB</option>
+    
+      <option value="3900 HSD" >3900 HSD</option>
+    
+      <option value="3900/14m3 Box &amp; Rock" >3900/14m3 Box &amp; Rock</option>
+    
+      <option value="3900/14m3/Box &amp; Rock" >3900/14m3/Box &amp; Rock</option>
+    
+      <option value="3900/16 CuM Box" >3900/16 CuM Box</option>
+    
+      <option value="3900/16 CuM Scoop" >3900/16 CuM Scoop</option>
+    
+      <option value="3900/16m3 Box" >3900/16m3 Box</option>
+    
+      <option value="3900/16m3/Box" >3900/16m3/Box</option>
+    
+      <option value="3900/17 ft/CAB" >3900/17 ft/CAB</option>
+    
+      <option value="3900/18m3 Box" >3900/18m3 Box</option>
+    
+      <option value="3900/18m3/Box" >3900/18m3/Box</option>
+    
+      <option value="3900/20m3 Box" >3900/20m3 Box</option>
+    
+      <option value="3900/20m3/Box" >3900/20m3/Box</option>
+    
+      <option value="3900/6 Cum/RMC" >3900/6 Cum/RMC</option>
+    
+      <option value="3900/7 Cum/RMC" >3900/7 Cum/RMC</option>
+    
+      <option value="3900/CAB" >3900/CAB</option>
+    
+      <option value="3900/CBC" >3900/CBC</option>
+    
+      <option value="3900/CBC/17 ft" >3900/CBC/17 ft</option>
+    
+      <option value="3900/CLB" >3900/CLB</option>
+    
+      <option value="3900/Cowl" >3900/Cowl</option>
+    
+      <option value="3900/DSD/17 ft" >3900/DSD/17 ft</option>
+    
+      <option value="3900/FSD" >3900/FSD</option>
+    
+      <option value="3900/FSD/17 ft" >3900/FSD/17 ft</option>
+    
+      <option value="3900/HSD" >3900/HSD</option>
+    
+      <option value="3900/HSD/17 ft" >3900/HSD/17 ft</option>
+    
+      <option value="3900/cab" >3900/cab</option>
+    
+      <option value="3920 CAB" >3920 CAB</option>
+    
+      <option value="3920 HSD" >3920 HSD</option>
+    
+      <option value="3920/14.2 Ft/CBC" >3920/14.2 Ft/CBC</option>
+    
+      <option value="3920/14.2 Ft/HSD" >3920/14.2 Ft/HSD</option>
+    
+      <option value="3920/17.1 Ft/CBC" >3920/17.1 Ft/CBC</option>
+    
+      <option value="3920/17.1 Ft/HSD" >3920/17.1 Ft/HSD</option>
+    
+      <option value="3920/CAB" >3920/CAB</option>
+    
+      <option value="3920/CAB/DCR29CBC 100B6M5" >3920/CAB/DCR29CBC 100B6M5</option>
+    
+      <option value="3920/CBC" >3920/CBC</option>
+    
+      <option value="3920/Cab" >3920/Cab</option>
+    
+      <option value="3920/HSD" >3920/HSD</option>
+    
+      <option value="3920/HSD/DCR29CBC 100B6M5" >3920/HSD/DCR29CBC 100B6M5</option>
+    
+      <option value="3940/CBC/17 ft" >3940/CBC/17 ft</option>
+    
+      <option value="3940/DSD/17 ft" >3940/DSD/17 ft</option>
+    
+      <option value="3940/FSD/17 ft" >3940/FSD/17 ft</option>
+    
+      <option value="3940/HSD/17 ft" >3940/HSD/17 ft</option>
+    
+      <option value="3950/CAB" >3950/CAB</option>
+    
+      <option value="3955/HSD/17ft" >3955/HSD/17ft</option>
+    
+      <option value="3970/CBC" >3970/CBC</option>
+    
+      <option value="3970/CBC/17 ft" >3970/CBC/17 ft</option>
+    
+      <option value="3970/DSD/17 ft" >3970/DSD/17 ft</option>
+    
+      <option value="3970/FSD" >3970/FSD</option>
+    
+      <option value="3970/FSD/17 ft" >3970/FSD/17 ft</option>
+    
+      <option value="3970/HSD" >3970/HSD</option>
+    
+      <option value="3970/HSD/17 ft" >3970/HSD/17 ft</option>
+    
+      <option value="3975/CBC" >3975/CBC</option>
+    
+      <option value="3975/Tipper" >3975/Tipper</option>
+    
+      <option value="3T" >3T</option>
+    
+      <option value="4000/14 Cum (Rock)" >4000/14 Cum (Rock)</option>
+    
+      <option value="4000/16 Cum (Box)" >4000/16 Cum (Box)</option>
+    
+      <option value="4000/CBC" >4000/CBC</option>
+    
+      <option value="4023/CAB" >4023/CAB</option>
+    
+      <option value="4053/Scoop Body" >4053/Scoop Body</option>
+    
+      <option value="4085/14 CuM/Front End Tipper" >4085/14 CuM/Front End Tipper</option>
+    
+      <option value="4085/14 CuM/Rock Body" >4085/14 CuM/Rock Body</option>
+    
+      <option value="4085/CAB" >4085/CAB</option>
+    
+      <option value="4085/CBC" >4085/CBC</option>
+    
+      <option value="4100/16 Cum Box" >4100/16 Cum Box</option>
+    
+      <option value="4100/16 Cum Rock" >4100/16 Cum Rock</option>
+    
+      <option value="4100/18 Cum Box" >4100/18 Cum Box</option>
+    
+      <option value="4200/CBC/17 ft/Sleeper" >4200/CBC/17 ft/Sleeper</option>
+    
+      <option value="4200/CBC/19 ft" >4200/CBC/19 ft</option>
+    
+      <option value="4200/CBC/20 ft" >4200/CBC/20 ft</option>
+    
+      <option value="4200/EX W HSD/17 ft" >4200/EX W HSD/17 ft</option>
+    
+      <option value="4200/FSD/19 ft" >4200/FSD/19 ft</option>
+    
+      <option value="4200/HSD/17 ft/Sleeper" >4200/HSD/17 ft/Sleeper</option>
+    
+      <option value="4200/HSD/19 ft" >4200/HSD/19 ft</option>
+    
+      <option value="4200/HSD/20 ft" >4200/HSD/20 ft</option>
+    
+      <option value="4200/LNG" >4200/LNG</option>
+    
+      <option value="4220/CBC/17 ft/Sleeper" >4220/CBC/17 ft/Sleeper</option>
+    
+      <option value="4225/Cab" >4225/Cab</option>
+    
+      <option value="4225/cowl" >4225/cowl</option>
+    
+      <option value="4240/CAB" >4240/CAB</option>
+    
+      <option value="4240/High Side Deck" >4240/High Side Deck</option>
+    
+      <option value="4240/Low Side Deck" >4240/Low Side Deck</option>
+    
+      <option value="4250/6 Cum/Transit Mixer Drum" >4250/6 Cum/Transit Mixer Drum</option>
+    
+      <option value="4250/7 Cum/Transit Mixer Drum" >4250/7 Cum/Transit Mixer Drum</option>
+    
+      <option value="4250/8 Cum/Transit Mixer Drum" >4250/8 Cum/Transit Mixer Drum</option>
+    
+      <option value="4250/8m3 RMC Transit Mixer" >4250/8m3 RMC Transit Mixer</option>
+    
+      <option value="4250/CAB/20(ft)" >4250/CAB/20(ft)</option>
+    
+      <option value="4250/CBC" >4250/CBC</option>
+    
+      <option value="4255/CBC" >4255/CBC</option>
+    
+      <option value="4255/HSD 19 ft/CNG" >4255/HSD 19 ft/CNG</option>
+    
+      <option value="4275/16 Cum Box Body" >4275/16 Cum Box Body</option>
+    
+      <option value="4275/16 Cum Scoop Body" >4275/16 Cum Scoop Body</option>
+    
+      <option value="4275/CBC" >4275/CBC</option>
+    
+      <option value="4275/CBC/14 Cum Scoop Body" >4275/CBC/14 Cum Scoop Body</option>
+    
+      <option value="4275/CBC/16 Cu.m Scoop" >4275/CBC/16 Cu.m Scoop</option>
+    
+      <option value="4275/CBC/16 Cum Box Body" >4275/CBC/16 Cum Box Body</option>
+    
+      <option value="4285/6 Cum/Transit Mixer Drum" >4285/6 Cum/Transit Mixer Drum</option>
+    
+      <option value="4285/7 Cum/Transit Mixer Drum" >4285/7 Cum/Transit Mixer Drum</option>
+    
+      <option value="4285/8 Cum/Transit Mixer Drum" >4285/8 Cum/Transit Mixer Drum</option>
+    
+      <option value="4295/CBC" >4295/CBC</option>
+    
+      <option value="4295/CBC/17ft" >4295/CBC/17ft</option>
+    
+      <option value="4295/CBC/20ft" >4295/CBC/20ft</option>
+    
+      <option value="4295/HSD" >4295/HSD</option>
+    
+      <option value="4295/HSD/17ft" >4295/HSD/17ft</option>
+    
+      <option value="4295/HSD/20ft" >4295/HSD/20ft</option>
+    
+      <option value="4300/19 ft/CAB" >4300/19 ft/CAB</option>
+    
+      <option value="4300/20 ft/CAB" >4300/20 ft/CAB</option>
+    
+      <option value="4300/CBC" >4300/CBC</option>
+    
+      <option value="4300/CWC" >4300/CWC</option>
+    
+      <option value="4300/FSD" >4300/FSD</option>
+    
+      <option value="4300/HSD" >4300/HSD</option>
+    
+      <option value="4340/Cowl" >4340/Cowl</option>
+    
+      <option value="4400/CBC" >4400/CBC</option>
+    
+      <option value="4400/CBC/20 ft" >4400/CBC/20 ft</option>
+    
+      <option value="4400/DSD/20 ft" >4400/DSD/20 ft</option>
+    
+      <option value="4400/FSD" >4400/FSD</option>
+    
+      <option value="4400/FSD/20 ft" >4400/FSD/20 ft</option>
+    
+      <option value="4400/HSD" >4400/HSD</option>
+    
+      <option value="4400/HSD/20 ft" >4400/HSD/20 ft</option>
+    
+      <option value="4420/CBC" >4420/CBC</option>
+    
+      <option value="4420/CBC/5812" >4420/CBC/5812</option>
+    
+      <option value="4420/CBC/6113" >4420/CBC/6113</option>
+    
+      <option value="4420/HSD" >4420/HSD</option>
+    
+      <option value="4420/HSD/5812" >4420/HSD/5812</option>
+    
+      <option value="4420/HSD/6113" >4420/HSD/6113</option>
+    
+      <option value="4425/CAB" >4425/CAB</option>
+    
+      <option value="4490/CAB/20ft" >4490/CAB/20ft</option>
+    
+      <option value="4490/CBC" >4490/CBC</option>
+    
+      <option value="4490/CBC/18ft" >4490/CBC/18ft</option>
+    
+      <option value="4490/CBC/20ft" >4490/CBC/20ft</option>
+    
+      <option value="4490/HSD" >4490/HSD</option>
+    
+      <option value="4490/HSD/18ft" >4490/HSD/18ft</option>
+    
+      <option value="4490/HSD/20ft" >4490/HSD/20ft</option>
+    
+      <option value="4500/20 CuM Box" >4500/20 CuM Box</option>
+    
+      <option value="4500/20 CuM Scoop" >4500/20 CuM Scoop</option>
+    
+      <option value="4500/CBC/20 ft" >4500/CBC/20 ft</option>
+    
+      <option value="4500/DSD/20 ft" >4500/DSD/20 ft</option>
+    
+      <option value="4500/FSD/20 ft" >4500/FSD/20 ft</option>
+    
+      <option value="4500/HSD/20 ft" >4500/HSD/20 ft</option>
+    
+      <option value="4530 CAB" >4530 CAB</option>
+    
+      <option value="4530 HSD" >4530 HSD</option>
+    
+      <option value="4530/CAB" >4530/CAB</option>
+    
+      <option value="4530/CBC" >4530/CBC</option>
+    
+      <option value="4530/Cab" >4530/Cab</option>
+    
+      <option value="4530/Container" >4530/Container</option>
+    
+      <option value="4530/DSD" >4530/DSD</option>
+    
+      <option value="4530/HD" >4530/HD</option>
+    
+      <option value="4530/HSD" >4530/HSD</option>
+    
+      <option value="4530/Reefers" >4530/Reefers</option>
+    
+      <option value="4540/CBC/20 ft" >4540/CBC/20 ft</option>
+    
+      <option value="4540/DSD/20 ft" >4540/DSD/20 ft</option>
+    
+      <option value="4540/FSD/20 ft" >4540/FSD/20 ft</option>
+    
+      <option value="4540/HSD/20 ft" >4540/HSD/20 ft</option>
+    
+      <option value="4550/8m3 Transit Mixer Drum" >4550/8m3 Transit Mixer Drum</option>
+    
+      <option value="4550/9m3 Transit Mixer Drum" >4550/9m3 Transit Mixer Drum</option>
+    
+      <option value="4550/CBC" >4550/CBC</option>
+    
+      <option value="4575 CBC/RMC" >4575 CBC/RMC</option>
+    
+      <option value="4575/CBC/18 Cu.m Box" >4575/CBC/18 Cu.m Box</option>
+    
+      <option value="4585/14 Cum (Rock)" >4585/14 Cum (Rock)</option>
+    
+      <option value="4585/16 Cum (Box)" >4585/16 Cum (Box)</option>
+    
+      <option value="4585/16 Cum (Rock)" >4585/16 Cum (Rock)</option>
+    
+      <option value="4585/20 Cum (Box)" >4585/20 Cum (Box)</option>
+    
+      <option value="4600/20m3 Box" >4600/20m3 Box</option>
+    
+      <option value="4600/20m3/Box" >4600/20m3/Box</option>
+    
+      <option value="4600/CAB" >4600/CAB</option>
+    
+      <option value="4600/cab" >4600/cab</option>
+    
+      <option value="4700/(20 ft)" >4700/(20 ft)</option>
+    
+      <option value="4750/(18 ft)" >4750/(18 ft)</option>
+    
+      <option value="4750/CBC/20 ft/Sleeper" >4750/CBC/20 ft/Sleeper</option>
+    
+      <option value="4750/CBC/21 ft" >4750/CBC/21 ft</option>
+    
+      <option value="4750/CBC/22 ft" >4750/CBC/22 ft</option>
+    
+      <option value="4750/DSD/22 ft" >4750/DSD/22 ft</option>
+    
+      <option value="4750/FSD/22 ft" >4750/FSD/22 ft</option>
+    
+      <option value="4750/HSD/20 ft/Sleeper" >4750/HSD/20 ft/Sleeper</option>
+    
+      <option value="4750/HSD/21 ft" >4750/HSD/21 ft</option>
+    
+      <option value="4750/HSD/22 ft" >4750/HSD/22 ft</option>
+    
+      <option value="4760/CAB" >4760/CAB</option>
+    
+      <option value="4760/High Side Deck" >4760/High Side Deck</option>
+    
+      <option value="4760/Low Side Deck" >4760/Low Side Deck</option>
+    
+      <option value="4770/CBC" >4770/CBC</option>
+    
+      <option value="4770/HSD" >4770/HSD</option>
+    
+      <option value="4800/CAB" >4800/CAB</option>
+    
+      <option value="4800/CAB/22(ft)" >4800/CAB/22(ft)</option>
+    
+      <option value="4800/CBC" >4800/CBC</option>
+    
+      <option value="4800/CWC" >4800/CWC</option>
+    
+      <option value="4800/Cowl" >4800/Cowl</option>
+    
+      <option value="4800/HSD" >4800/HSD</option>
+    
+      <option value="4875/CBC/22 Cum Box Body" >4875/CBC/22 Cum Box Body</option>
+    
+      <option value="4880" >4880</option>
+    
+      <option value="4900/CBC" >4900/CBC</option>
+    
+      <option value="4900/CBC/22 ft" >4900/CBC/22 ft</option>
+    
+      <option value="4900/DSD/22 ft" >4900/DSD/22 ft</option>
+    
+      <option value="4900/FSD/22 ft" >4900/FSD/22 ft</option>
+    
+      <option value="4900/HSD" >4900/HSD</option>
+    
+      <option value="4900/HSD/22 ft" >4900/HSD/22 ft</option>
+    
+      <option value="4920 CAB" >4920 CAB</option>
+    
+      <option value="4920 HSD" >4920 HSD</option>
+    
+      <option value="4920/20ft" >4920/20ft</option>
+    
+      <option value="4920/CAB" >4920/CAB</option>
+    
+      <option value="4920/CAB/20 ft" >4920/CAB/20 ft</option>
+    
+      <option value="4920/CBC" >4920/CBC</option>
+    
+      <option value="4920/Cab" >4920/Cab</option>
+    
+      <option value="4920/HSD" >4920/HSD</option>
+    
+      <option value="4930/CAB" >4930/CAB</option>
+    
+      <option value="4930/Cowl" >4930/Cowl</option>
+    
+      <option value="4940/CBC/22 ft" >4940/CBC/22 ft</option>
+    
+      <option value="4940/HSD/22 ft" >4940/HSD/22 ft</option>
+    
+      <option value="4975/14/16 m3 Rock Body" >4975/14/16 m3 Rock Body</option>
+    
+      <option value="4975/16/18 m3 Box Body" >4975/16/18 m3 Box Body</option>
+    
+      <option value="4980+1300/CAB" >4980+1300/CAB</option>
+    
+      <option value="4980+1300/FL8JKDG-P/Compactor" >4980+1300/FL8JKDG-P/Compactor</option>
+    
+      <option value="4980+1300/FL8JKDG-P/Tanker" >4980+1300/FL8JKDG-P/Tanker</option>
+    
+      <option value="4WD BS6 - PS" >4WD BS6 - PS</option>
+    
+      <option value="4WD Power Steering" >4WD Power Steering</option>
+    
+      <option value="5050/(20 ft)" >5050/(20 ft)</option>
+    
+      <option value="5050/(22 ft)" >5050/(22 ft)</option>
+    
+      <option value="5050/8 Cum/RMC" >5050/8 Cum/RMC</option>
+    
+      <option value="5050/CBC" >5050/CBC</option>
+    
+      <option value="5050/Cowl" >5050/Cowl</option>
+    
+      <option value="5100/CAB" >5100/CAB</option>
+    
+      <option value="5100/CAB/20(ft)" >5100/CAB/20(ft)</option>
+    
+      <option value="5100/CBC" >5100/CBC</option>
+    
+      <option value="5105/CBC" >5105/CBC</option>
+    
+      <option value="5105/CBC/22ft" >5105/CBC/22ft</option>
+    
+      <option value="5105/CBC/24ft" >5105/CBC/24ft</option>
+    
+      <option value="5105/HSD" >5105/HSD</option>
+    
+      <option value="5105/HSD 22 ft/CNG" >5105/HSD 22 ft/CNG</option>
+    
+      <option value="5105/HSD 24 ft/CNG" >5105/HSD 24 ft/CNG</option>
+    
+      <option value="5105/HSD/22ft" >5105/HSD/22ft</option>
+    
+      <option value="5105/HSD/24ft" >5105/HSD/24ft</option>
+    
+      <option value="5150/22 ft/CAB" >5150/22 ft/CAB</option>
+    
+      <option value="5150/24 ft/CAB" >5150/24 ft/CAB</option>
+    
+      <option value="5150/CBC" >5150/CBC</option>
+    
+      <option value="5150/CBC/22ft" >5150/CBC/22ft</option>
+    
+      <option value="5150/CBC/24ft" >5150/CBC/24ft</option>
+    
+      <option value="5150/FSD/22ft" >5150/FSD/22ft</option>
+    
+      <option value="5150/FSD/24ft" >5150/FSD/24ft</option>
+    
+      <option value="5150/HSD/22ft" >5150/HSD/22ft</option>
+    
+      <option value="5150/HSD/24ft" >5150/HSD/24ft</option>
+    
+      <option value="5170/CBC/22Ft" >5170/CBC/22Ft</option>
+    
+      <option value="5170/CBC/24Ft" >5170/CBC/24Ft</option>
+    
+      <option value="5170/CBC/6860" >5170/CBC/6860</option>
+    
+      <option value="5170/CBC/7365" >5170/CBC/7365</option>
+    
+      <option value="5170/HSD/22Ft" >5170/HSD/22Ft</option>
+    
+      <option value="5170/HSD/24Ft" >5170/HSD/24Ft</option>
+    
+      <option value="5170/HSD/6860" >5170/HSD/6860</option>
+    
+      <option value="5170/HSD/7365" >5170/HSD/7365</option>
+    
+      <option value="5175/18 Cum Scoop Body" >5175/18 Cum Scoop Body</option>
+    
+      <option value="5175/18 Cum/Scoop Body" >5175/18 Cum/Scoop Body</option>
+    
+      <option value="5175/19 Cum/Box Body" >5175/19 Cum/Box Body</option>
+    
+      <option value="5175/23 Cum Box Body" >5175/23 Cum Box Body</option>
+    
+      <option value="5175/23 Cum/Box Body" >5175/23 Cum/Box Body</option>
+    
+      <option value="5175/CBC" >5175/CBC</option>
+    
+      <option value="5175/CBC/18 Cum" >5175/CBC/18 Cum</option>
+    
+      <option value="5175/CBC/19.5 Cu.m Scoop" >5175/CBC/19.5 Cu.m Scoop</option>
+    
+      <option value="5175/CBC/23 Cu.m Box" >5175/CBC/23 Cu.m Box</option>
+    
+      <option value="5175/CBC/23 Cum" >5175/CBC/23 Cum</option>
+    
+      <option value="5175/CBC/27 Cu.m Box" >5175/CBC/27 Cu.m Box</option>
+    
+      <option value="5175/CBC/Sleeper" >5175/CBC/Sleeper</option>
+    
+      <option value="5200/19 CuM Scoop Body" >5200/19 CuM Scoop Body</option>
+    
+      <option value="5200/23 CuM Box Body" >5200/23 CuM Box Body</option>
+    
+      <option value="5200/CBC/21 ft/Sleeper" >5200/CBC/21 ft/Sleeper</option>
+    
+      <option value="5200/CBC/23 ft" >5200/CBC/23 ft</option>
+    
+      <option value="5200/CBC/24 ft" >5200/CBC/24 ft</option>
+    
+      <option value="5200/HSD/21 ft/Sleeper" >5200/HSD/21 ft/Sleeper</option>
+    
+      <option value="5200/HSD/23 ft" >5200/HSD/23 ft</option>
+    
+      <option value="5200/HSD/24 ft" >5200/HSD/24 ft</option>
+    
+      <option value="5205" >5205</option>
+    
+      <option value="5230/CAB" >5230/CAB</option>
+    
+      <option value="5230/Cowl" >5230/Cowl</option>
+    
+      <option value="5250/10 Cum/RMC" >5250/10 Cum/RMC</option>
+    
+      <option value="5250/16m3/Box" >5250/16m3/Box</option>
+    
+      <option value="5250/18 Cum Box" >5250/18 Cum Box</option>
+    
+      <option value="5250/18 Cum Box Body" >5250/18 Cum Box Body</option>
+    
+      <option value="5250/18m3/Box" >5250/18m3/Box</option>
+    
+      <option value="5250/18m3/Box &amp; 19 Rock" >5250/18m3/Box &amp; 19 Rock</option>
+    
+      <option value="5250/19 Cum Rock" >5250/19 Cum Rock</option>
+    
+      <option value="5250/19 Cum Scoop" >5250/19 Cum Scoop</option>
+    
+      <option value="5250/19 Cum Scoop Body" >5250/19 Cum Scoop Body</option>
+    
+      <option value="5250/20m3/Box" >5250/20m3/Box</option>
+    
+      <option value="5250/22m3/Box" >5250/22m3/Box</option>
+    
+      <option value="5250/23 Cum Box" >5250/23 Cum Box</option>
+    
+      <option value="5250/23 Cum Box Body" >5250/23 Cum Box Body</option>
+    
+      <option value="5250/9 Cum/RMC" >5250/9 Cum/RMC</option>
+    
+      <option value="5250/CAB" >5250/CAB</option>
+    
+      <option value="5285/10 Cum/Transit Mixer Drum" >5285/10 Cum/Transit Mixer Drum</option>
+    
+      <option value="5285/16 Cum" >5285/16 Cum</option>
+    
+      <option value="5285/18 Cum (Rock)" >5285/18 Cum (Rock)</option>
+    
+      <option value="5285/18RB" >5285/18RB</option>
+    
+      <option value="5285/19.5RB" >5285/19.5RB</option>
+    
+      <option value="5285/19RB" >5285/19RB</option>
+    
+      <option value="5285/20 Cu.M Box Body" >5285/20 Cu.M Box Body</option>
+    
+      <option value="5285/20 Cum" >5285/20 Cum</option>
+    
+      <option value="5285/20 Cum (Box)" >5285/20 Cum (Box)</option>
+    
+      <option value="5285/23 Cu.M Box Body" >5285/23 Cu.M Box Body</option>
+    
+      <option value="5285/23 Cum (Box)" >5285/23 Cum (Box)</option>
+    
+      <option value="5285/23BB" >5285/23BB</option>
+    
+      <option value="5285/26 Coal Body" >5285/26 Coal Body</option>
+    
+      <option value="5285/9 Cum/Transit Mixer Drum" >5285/9 Cum/Transit Mixer Drum</option>
+    
+      <option value="5285/CBC" >5285/CBC</option>
+    
+      <option value="5300 CAB" >5300 CAB</option>
+    
+      <option value="5300/22ft" >5300/22ft</option>
+    
+      <option value="5300/CAB" >5300/CAB</option>
+    
+      <option value="5300/CBC" >5300/CBC</option>
+    
+      <option value="5300/Cab" >5300/Cab</option>
+    
+      <option value="5300/Cowl" >5300/Cowl</option>
+    
+      <option value="5300/HSD" >5300/HSD</option>
+    
+      <option value="5300/RMC" >5300/RMC</option>
+    
+      <option value="5300/Rock Body" >5300/Rock Body</option>
+    
+      <option value="5350/CBC" >5350/CBC</option>
+    
+      <option value="5350/CBC/24ft" >5350/CBC/24ft</option>
+    
+      <option value="5350/CWC" >5350/CWC</option>
+    
+      <option value="5350/HSD" >5350/HSD</option>
+    
+      <option value="5350/HSD/24ft" >5350/HSD/24ft</option>
+    
+      <option value="5450/(24 ft)" >5450/(24 ft)</option>
+    
+      <option value="5450/20m3/Box" >5450/20m3/Box</option>
+    
+      <option value="5490/CAB/22ft" >5490/CAB/22ft</option>
+    
+      <option value="5490/CAB/24ft" >5490/CAB/24ft</option>
+    
+      <option value="5490/CBC" >5490/CBC</option>
+    
+      <option value="5490/CBC/22ft" >5490/CBC/22ft</option>
+    
+      <option value="5490/CBC/24ft" >5490/CBC/24ft</option>
+    
+      <option value="5490/HSD" >5490/HSD</option>
+    
+      <option value="5490/HSD/22ft" >5490/HSD/22ft</option>
+    
+      <option value="5490/HSD/24ft" >5490/HSD/24ft</option>
+    
+      <option value="5490/MS Container" >5490/MS Container</option>
+    
+      <option value="5500/CAB/22(ft)" >5500/CAB/22(ft)</option>
+    
+      <option value="5500/Cowl" >5500/Cowl</option>
+    
+      <option value="5505" >5505</option>
+    
+      <option value="5550/CBC" >5550/CBC</option>
+    
+      <option value="5560 CAB" >5560 CAB</option>
+    
+      <option value="5560/24ft" >5560/24ft</option>
+    
+      <option value="5560/CAB" >5560/CAB</option>
+    
+      <option value="5560/HSD" >5560/HSD</option>
+    
+      <option value="5585/CAB" >5585/CAB</option>
+    
+      <option value="5600/(22 ft)" >5600/(22 ft)</option>
+    
+      <option value="5600/CAB" >5600/CAB</option>
+    
+      <option value="5600/Cowl" >5600/Cowl</option>
+    
+      <option value="5670/18.7 CuM/Front End Tipper" >5670/18.7 CuM/Front End Tipper</option>
+    
+      <option value="5670/18.7 CuM/Rock Body" >5670/18.7 CuM/Rock Body</option>
+    
+      <option value="5670/CAB" >5670/CAB</option>
+    
+      <option value="5680/CAB/(28 ft)" >5680/CAB/(28 ft)</option>
+    
+      <option value="5680/CAB/(30 ft)" >5680/CAB/(30 ft)</option>
+    
+      <option value="5680/Cowl/(28 ft)" >5680/Cowl/(28 ft)</option>
+    
+      <option value="5680/Cowl/(30 ft)" >5680/Cowl/(30 ft)</option>
+    
+      <option value="5725/Chassis" >5725/Chassis</option>
+    
+      <option value="5750/(24 ft)" >5750/(24 ft)</option>
+    
+      <option value="5750/(26 ft)" >5750/(26 ft)</option>
+    
+      <option value="5750/CBC" >5750/CBC</option>
+    
+      <option value="5750/Cowl" >5750/Cowl</option>
+    
+      <option value="5775/CBC" >5775/CBC</option>
+    
+      <option value="5775/CBC/Sleeper" >5775/CBC/Sleeper</option>
+    
+      <option value="5800/CBC" >5800/CBC</option>
+    
+      <option value="5800/FSD" >5800/FSD</option>
+    
+      <option value="5800/HSD" >5800/HSD</option>
+    
+      <option value="5900/CAB/24(ft)" >5900/CAB/24(ft)</option>
+    
+      <option value="5900/CBC" >5900/CBC</option>
+    
+      <option value="5900/CBC/Mid Cab Sleeper" >5900/CBC/Mid Cab Sleeper</option>
+    
+      <option value="5905" >5905</option>
+    
+      <option value="5980/CAB" >5980/CAB</option>
+    
+      <option value="5980/Cowl" >5980/Cowl</option>
+    
+      <option value="6 Cum" >6 Cum</option>
+    
+      <option value="6*4" >6*4</option>
+    
+      <option value="6000/(24 ft)" >6000/(24 ft)</option>
+    
+      <option value="6000/(28 ft)" >6000/(28 ft)</option>
+    
+      <option value="6000/CAB" >6000/CAB</option>
+    
+      <option value="6000/Cowl" >6000/Cowl</option>
+    
+      <option value="6100/(24 ft)" >6100/(24 ft)</option>
+    
+      <option value="6225/Box Body" >6225/Box Body</option>
+    
+      <option value="6300/(26 ft)" >6300/(26 ft)</option>
+    
+      <option value="6300/(30 ft)" >6300/(30 ft)</option>
+    
+      <option value="6300/CAB" >6300/CAB</option>
+    
+      <option value="6350/(26 ft)" >6350/(26 ft)</option>
+    
+      <option value="6375/32(ft)/CBC" >6375/32(ft)/CBC</option>
+    
+      <option value="6375/CBC" >6375/CBC</option>
+    
+      <option value="6375/CBC/32(ft)" >6375/CBC/32(ft)</option>
+    
+      <option value="6375/CBC/Compact Sleeper" >6375/CBC/Compact Sleeper</option>
+    
+      <option value="6375/CBC/Sleeper" >6375/CBC/Sleeper</option>
+    
+      <option value="6575/CBC" >6575/CBC</option>
+    
+      <option value="6575/CBC/Mid Cab Sleeper (28.7 ft)" >6575/CBC/Mid Cab Sleeper (28.7 ft)</option>
+    
+      <option value="6575/CBC/Mid Cab Sleeper (30.3 ft)" >6575/CBC/Mid Cab Sleeper (30.3 ft)</option>
+    
+      <option value="6575/CBC/Sleeper" >6575/CBC/Sleeper</option>
+    
+      <option value="6575/CBC/Sleeper (24.1 ft)" >6575/CBC/Sleeper (24.1 ft)</option>
+    
+      <option value="6575/CBC/Sleeper (27.6 ft)" >6575/CBC/Sleeper (27.6 ft)</option>
+    
+      <option value="6600/(26 ft)" >6600/(26 ft)</option>
+    
+      <option value="6600/(28 ft)" >6600/(28 ft)</option>
+    
+      <option value="6600/(30 ft)" >6600/(30 ft)</option>
+    
+      <option value="6600/(32 ft)" >6600/(32 ft)</option>
+    
+      <option value="6600/16 Cum Box" >6600/16 Cum Box</option>
+    
+      <option value="6600/18 Cum Box" >6600/18 Cum Box</option>
+    
+      <option value="6600/24m3/Box" >6600/24m3/Box</option>
+    
+      <option value="6600/26m3/Box" >6600/26m3/Box</option>
+    
+      <option value="6600/29 Cum Box" >6600/29 Cum Box</option>
+    
+      <option value="6600/CAB" >6600/CAB</option>
+    
+      <option value="6600/CBC" >6600/CBC</option>
+    
+      <option value="6600/CBC/(28 ft)" >6600/CBC/(28 ft)</option>
+    
+      <option value="6600/CBC/(30 ft)" >6600/CBC/(30 ft)</option>
+    
+      <option value="6600/CBC/(32 ft)" >6600/CBC/(32 ft)</option>
+    
+      <option value="6600/Cowl" >6600/Cowl</option>
+    
+      <option value="6600/Cowl/(28 ft)" >6600/Cowl/(28 ft)</option>
+    
+      <option value="6600/Cowl/(30 ft)" >6600/Cowl/(30 ft)</option>
+    
+      <option value="6600/Cowl/(32 ft)" >6600/Cowl/(32 ft)</option>
+    
+      <option value="6600/FSD/(28 ft)" >6600/FSD/(28 ft)</option>
+    
+      <option value="6600/FSD/(30 ft)" >6600/FSD/(30 ft)</option>
+    
+      <option value="6600/FSD/(32 ft)" >6600/FSD/(32 ft)</option>
+    
+      <option value="6600/HSD/(28 ft)" >6600/HSD/(28 ft)</option>
+    
+      <option value="6600/HSD/(30 ft)" >6600/HSD/(30 ft)</option>
+    
+      <option value="6600/HSD/(32 ft)" >6600/HSD/(32 ft)</option>
+    
+      <option value="6690/CBC" >6690/CBC</option>
+    
+      <option value="6690/CWC" >6690/CWC</option>
+    
+      <option value="6690/HSD" >6690/HSD</option>
+    
+      <option value="6700/CAB/31(ft)" >6700/CAB/31(ft)</option>
+    
+      <option value="6700/CBC" >6700/CBC</option>
+    
+      <option value="6750" >6750</option>
+    
+      <option value="6775/CAB/30(ft)" >6775/CAB/30(ft)</option>
+    
+      <option value="6775/CBC" >6775/CBC</option>
+    
+      <option value="6775/CBC/(31.3ft)" >6775/CBC/(31.3ft)</option>
+    
+      <option value="6775/CBC/Mid Cab Sleeper" >6775/CBC/Mid Cab Sleeper</option>
+    
+      <option value="6775/CBC/Sleeper" >6775/CBC/Sleeper</option>
+    
+      <option value="6800/28ft" >6800/28ft</option>
+    
+      <option value="6800/30ft" >6800/30ft</option>
+    
+      <option value="6800/31.5ft" >6800/31.5ft</option>
+    
+      <option value="6800/32ft" >6800/32ft</option>
+    
+      <option value="6800/CAB" >6800/CAB</option>
+    
+      <option value="6800/CAB/28ft" >6800/CAB/28ft</option>
+    
+      <option value="6800/CAB/30ft" >6800/CAB/30ft</option>
+    
+      <option value="6800/CAB/31.5ft" >6800/CAB/31.5ft</option>
+    
+      <option value="6800/CAB/32ft" >6800/CAB/32ft</option>
+    
+      <option value="6800/CBC" >6800/CBC</option>
+    
+      <option value="6800/CBC/25 ft" >6800/CBC/25 ft</option>
+    
+      <option value="6800/CBC/28 ft" >6800/CBC/28 ft</option>
+    
+      <option value="6800/CBC/30 ft" >6800/CBC/30 ft</option>
+    
+      <option value="6800/CBC/31 ft" >6800/CBC/31 ft</option>
+    
+      <option value="6800/CWC" >6800/CWC</option>
+    
+      <option value="6800/Cowl" >6800/Cowl</option>
+    
+      <option value="6800/HSD" >6800/HSD</option>
+    
+      <option value="6800/HSD/29 ft" >6800/HSD/29 ft</option>
+    
+      <option value="6970/29 CuM/Box Body" >6970/29 CuM/Box Body</option>
+    
+      <option value="6970/32 CuM/Box Body" >6970/32 CuM/Box Body</option>
+    
+      <option value="6970/32 CuM/Front End Tipper" >6970/32 CuM/Front End Tipper</option>
+    
+      <option value="6970/CAB" >6970/CAB</option>
+    
+      <option value="7 CuM Scoop Body" >7 CuM Scoop Body</option>
+    
+      <option value="7 Cum" >7 Cum</option>
+    
+      <option value="BS VI" >BS VI</option>
+    
+      <option value="BSVI" >BSVI</option>
+    
+      <option value="Base" >Base</option>
+    
+      <option value="Bi Fuel" >Bi Fuel</option>
+    
+      <option value="Box Body" >Box Body</option>
+    
+      <option value="Box Body - 18 Cum" >Box Body - 18 Cum</option>
+    
+      <option value="Box Body - 22 Cum" >Box Body - 22 Cum</option>
+    
+      <option value="Box Body- 20 Cum" >Box Body- 20 Cum</option>
+    
+      <option value="Box Body-16 Cum" >Box Body-16 Cum</option>
+    
+      <option value="Box body" >Box body</option>
+    
+      <option value="CAB" >CAB</option>
+    
+      <option value="CAB 24ft" >CAB 24ft</option>
+    
+      <option value="CAB 3075" >CAB 3075</option>
+    
+      <option value="CAB 32 FT" >CAB 32 FT</option>
+    
+      <option value="CAB 3310" >CAB 3310</option>
+    
+      <option value="CAB 3320/51000" >CAB 3320/51000</option>
+    
+      <option value="CAB 3320/52000" >CAB 3320/52000</option>
+    
+      <option value="CAB 3320/53000" >CAB 3320/53000</option>
+    
+      <option value="CAB 3320/54000" >CAB 3320/54000</option>
+    
+      <option value="CAB 3320/55000" >CAB 3320/55000</option>
+    
+      <option value="CAB 3400" >CAB 3400</option>
+    
+      <option value="CAB 3600" >CAB 3600</option>
+    
+      <option value="CAB 3800" >CAB 3800</option>
+    
+      <option value="CAB 3890" >CAB 3890</option>
+    
+      <option value="CAB 3920" >CAB 3920</option>
+    
+      <option value="CAB 4050" >CAB 4050</option>
+    
+      <option value="CAB 4100" >CAB 4100</option>
+    
+      <option value="CAB 4200" >CAB 4200</option>
+    
+      <option value="CAB 4530" >CAB 4530</option>
+    
+      <option value="CAB 4830" >CAB 4830</option>
+    
+      <option value="CAB 4880" >CAB 4880</option>
+    
+      <option value="CAB 4920" >CAB 4920</option>
+    
+      <option value="CAB 5000" >CAB 5000</option>
+    
+      <option value="CAB 5205" >CAB 5205</option>
+    
+      <option value="CAB 5300" >CAB 5300</option>
+    
+      <option value="CAB 5350" >CAB 5350</option>
+    
+      <option value="CAB 5505" >CAB 5505</option>
+    
+      <option value="CAB 5580" >CAB 5580</option>
+    
+      <option value="CAB 5600" >CAB 5600</option>
+    
+      <option value="CAB 5905" >CAB 5905</option>
+    
+      <option value="CAB 6100" >CAB 6100</option>
+    
+      <option value="CAB 6600" >CAB 6600</option>
+    
+      <option value="CAB 6700" >CAB 6700</option>
+    
+      <option value="CAB 6750" >CAB 6750</option>
+    
+      <option value="CAB 6770" >CAB 6770</option>
+    
+      <option value="CAB/10x4" >CAB/10x4</option>
+    
+      <option value="CAB/3320" >CAB/3320</option>
+    
+      <option value="CAB/3580" >CAB/3580</option>
+    
+      <option value="CAB/3880/14 Box Body" >CAB/3880/14 Box Body</option>
+    
+      <option value="CAB/3880/16 Box Body" >CAB/3880/16 Box Body</option>
+    
+      <option value="CAB/3950/16 Box Body" >CAB/3950/16 Box Body</option>
+    
+      <option value="CAB/3950/16 Scoop Body" >CAB/3950/16 Scoop Body</option>
+    
+      <option value="CAB/4570/18 Box Body" >CAB/4570/18 Box Body</option>
+    
+      <option value="CAB/4880/20 Box Body" >CAB/4880/20 Box Body</option>
+    
+      <option value="CAB/5 Cubic Meter Tipper" >CAB/5 Cubic Meter Tipper</option>
+    
+      <option value="CAB/5580" >CAB/5580</option>
+    
+      <option value="CAB/6 Cubic Meter Tipper" >CAB/6 Cubic Meter Tipper</option>
+    
+      <option value="CAB/6750" >CAB/6750</option>
+    
+      <option value="CAB/7 Cubic Meter Tipper" >CAB/7 Cubic Meter Tipper</option>
+    
+      <option value="CBC" >CBC</option>
+    
+      <option value="CBC 1.3T - BS6 - MS" >CBC 1.3T - BS6 - MS</option>
+    
+      <option value="CBC 1.7T - BS6 - PS" >CBC 1.7T - BS6 - PS</option>
+    
+      <option value="CBC 2500" >CBC 2500</option>
+    
+      <option value="CBC 2750" >CBC 2750</option>
+    
+      <option value="CBC 2770" >CBC 2770</option>
+    
+      <option value="CBC 3320" >CBC 3320</option>
+    
+      <option value="CBC 3450" >CBC 3450</option>
+    
+      <option value="CBC 3800" >CBC 3800</option>
+    
+      <option value="CBC 4000" >CBC 4000</option>
+    
+      <option value="CBC 4100" >CBC 4100</option>
+    
+      <option value="CBC 4500" >CBC 4500</option>
+    
+      <option value="CBC 4900" >CBC 4900</option>
+    
+      <option value="CBC 4950" >CBC 4950</option>
+    
+      <option value="CBC 4WD BS6 - PS" >CBC 4WD BS6 - PS</option>
+    
+      <option value="CBC 5100" >CBC 5100</option>
+    
+      <option value="CBC 5300" >CBC 5300</option>
+    
+      <option value="CBC 5450" >CBC 5450</option>
+    
+      <option value="CBC 5600" >CBC 5600</option>
+    
+      <option value="CBC 6100" >CBC 6100</option>
+    
+      <option value="CBC 6770" >CBC 6770</option>
+    
+      <option value="CBC/3320 (12 Ft)" >CBC/3320 (12 Ft)</option>
+    
+      <option value="CBC/3360" >CBC/3360</option>
+    
+      <option value="CBC/3425" >CBC/3425</option>
+    
+      <option value="CBC/3600" >CBC/3600</option>
+    
+      <option value="CBC/3600/10.5 Cu.m Box" >CBC/3600/10.5 Cu.m Box</option>
+    
+      <option value="CBC/3760" >CBC/3760</option>
+    
+      <option value="CBC/3850 (14 Ft)" >CBC/3850 (14 Ft)</option>
+    
+      <option value="CBC/3850 (17 Ft)" >CBC/3850 (17 Ft)</option>
+    
+      <option value="CBC/3955" >CBC/3955</option>
+    
+      <option value="CBC/4250" >CBC/4250</option>
+    
+      <option value="CBC/4275" >CBC/4275</option>
+    
+      <option value="CBC/4275/16 Cu.m Box" >CBC/4275/16 Cu.m Box</option>
+    
+      <option value="CBC/4275/7485 16 Cu.m Box" >CBC/4275/7485 16 Cu.m Box</option>
+    
+      <option value="CBC/4350 (20 Ft)" >CBC/4350 (20 Ft)</option>
+    
+      <option value="CBC/4500" >CBC/4500</option>
+    
+      <option value="CBC/4800" >CBC/4800</option>
+    
+      <option value="CBC/4800 (22Ft)" >CBC/4800 (22Ft)</option>
+    
+      <option value="CBC/4900" >CBC/4900</option>
+    
+      <option value="CBC/5050" >CBC/5050</option>
+    
+      <option value="CBC/5100" >CBC/5100</option>
+    
+      <option value="CBC/5275" >CBC/5275</option>
+    
+      <option value="CBC/5700" >CBC/5700</option>
+    
+      <option value="CBC/5775" >CBC/5775</option>
+    
+      <option value="CBC/5900" >CBC/5900</option>
+    
+      <option value="CBC/6100" >CBC/6100</option>
+    
+      <option value="CBC/6200" >CBC/6200</option>
+    
+      <option value="CBC/6575" >CBC/6575</option>
+    
+      <option value="CBC/6575/(10x4)" >CBC/6575/(10x4)</option>
+    
+      <option value="CBC/6770" >CBC/6770</option>
+    
+      <option value="CBC/6800" >CBC/6800</option>
+    
+      <option value="CITY 3000" >CITY 3000</option>
+    
+      <option value="CITY 3000 LX" >CITY 3000 LX</option>
+    
+      <option value="CITY 3000 VXi" >CITY 3000 VXi</option>
+    
+      <option value="CLB" >CLB</option>
+    
+      <option value="CLB 3400" >CLB 3400</option>
+    
+      <option value="CLB 3600" >CLB 3600</option>
+    
+      <option value="CLB 3800" >CLB 3800</option>
+    
+      <option value="CLB 4530" >CLB 4530</option>
+    
+      <option value="CLB AC" >CLB AC</option>
+    
+      <option value="CLB Non AC" >CLB Non AC</option>
+    
+      <option value="CLB/2600" >CLB/2600</option>
+    
+      <option value="CNG" >CNG</option>
+    
+      <option value="CNG AC" >CNG AC</option>
+    
+      <option value="CNG Cab Chassis" >CNG Cab Chassis</option>
+    
+      <option value="CNG Plus" >CNG Plus</option>
+    
+      <option value="CNG Standard" >CNG Standard</option>
+    
+      <option value="COntainer" >COntainer</option>
+    
+      <option value="COntainer 3600" >COntainer 3600</option>
+    
+      <option value="CX" >CX</option>
+    
+      <option value="Cab" >Cab</option>
+    
+      <option value="Cab 3305" >Cab 3305</option>
+    
+      <option value="Cab Chassis" >Cab Chassis</option>
+    
+      <option value="Cab Chassis AC" >Cab Chassis AC</option>
+    
+      <option value="Cab. High Side Deck" >Cab. High Side Deck</option>
+    
+      <option value="Cab. Low Side Deck" >Cab. Low Side Deck</option>
+    
+      <option value="Cab/3850" >Cab/3850</option>
+    
+      <option value="City" >City</option>
+    
+      <option value="Coal/33 Cum" >Coal/33 Cum</option>
+    
+      <option value="Container" >Container</option>
+    
+      <option value="Container 3400" >Container 3400</option>
+    
+      <option value="Container 3600" >Container 3600</option>
+    
+      <option value="Container 3800" >Container 3800</option>
+    
+      <option value="Container 4200" >Container 4200</option>
+    
+      <option value="Container 4920" >Container 4920</option>
+    
+      <option value="Container/3850 (14 Ft)" >Container/3850 (14 Ft)</option>
+    
+      <option value="Cowl" >Cowl</option>
+    
+      <option value="Cowl 4225" >Cowl 4225</option>
+    
+      <option value="Cowl 4530" >Cowl 4530</option>
+    
+      <option value="Cowl 4860" >Cowl 4860</option>
+    
+      <option value="Cowl 4920" >Cowl 4920</option>
+    
+      <option value="Cowl 5195" >Cowl 5195</option>
+    
+      <option value="Cowl 5205" >Cowl 5205</option>
+    
+      <option value="Cowl 5300" >Cowl 5300</option>
+    
+      <option value="Cowl 5505" >Cowl 5505</option>
+    
+      <option value="Cowl 5600" >Cowl 5600</option>
+    
+      <option value="Cowl 5905" >Cowl 5905</option>
+    
+      <option value="Cowl 6200" >Cowl 6200</option>
+    
+      <option value="Cowl 6750" >Cowl 6750</option>
+    
+      <option value="Cowl 6780" >Cowl 6780</option>
+    
+      <option value="Cowl 6800" >Cowl 6800</option>
+    
+      <option value="Cowl/4800/20 ft" >Cowl/4800/20 ft</option>
+    
+      <option value="Cowl/4800/32 ft" >Cowl/4800/32 ft</option>
+    
+      <option value="Cowl/5505/24 ft" >Cowl/5505/24 ft</option>
+    
+      <option value="Cowl/5505/32 ft" >Cowl/5505/32 ft</option>
+    
+      <option value="Crew Cabin 4x2" >Crew Cabin 4x2</option>
+    
+      <option value="Crew Cabin 4x4" >Crew Cabin 4x4</option>
+    
+      <option value="DSD" >DSD</option>
+    
+      <option value="DSD 2770" >DSD 2770</option>
+    
+      <option value="DSD 3320" >DSD 3320</option>
+    
+      <option value="DSD 3450" >DSD 3450</option>
+    
+      <option value="DSD 4100" >DSD 4100</option>
+    
+      <option value="Delivery Van" >Delivery Van</option>
+    
+      <option value="Diesel" >Diesel</option>
+    
+      <option value="Diesel Plus" >Diesel Plus</option>
+    
+      <option value="Double Cab" >Double Cab</option>
+    
+      <option value="Double Cab VX" >Double Cab VX</option>
+    
+      <option value="E-350L" >E-350L</option>
+    
+      <option value="E-350X" >E-350X</option>
+    
+      <option value="EV" >EV</option>
+    
+      <option value="Electric" >Electric</option>
+    
+      <option value="Electric/Box Body" >Electric/Box Body</option>
+    
+      <option value="Electric/HSD" >Electric/HSD</option>
+    
+      <option value="Electric/Truck" >Electric/Truck</option>
+    
+      <option value="FB 1.3T - BS6 - MS" >FB 1.3T - BS6 - MS</option>
+    
+      <option value="FB 1.3T - BS6 - PS" >FB 1.3T - BS6 - PS</option>
+    
+      <option value="FB 1.3T - BS6 - PS AC" >FB 1.3T - BS6 - PS AC</option>
+    
+      <option value="FB 1.7T - BS6 - PS" >FB 1.7T - BS6 - PS</option>
+    
+      <option value="FB CNG PS BS6" >FB CNG PS BS6</option>
+    
+      <option value="FBT 2500 2.8 Cum" >FBT 2500 2.8 Cum</option>
+    
+      <option value="FSB" >FSB</option>
+    
+      <option value="FSD" >FSD</option>
+    
+      <option value="FSD 1250" >FSD 1250</option>
+    
+      <option value="FSD 1700" >FSD 1700</option>
+    
+      <option value="FSD 3450" >FSD 3450</option>
+    
+      <option value="FSD 3800" >FSD 3800</option>
+    
+      <option value="FSD 4100" >FSD 4100</option>
+    
+      <option value="FSD 4920" >FSD 4920</option>
+    
+      <option value="FSD/2350" >FSD/2350</option>
+    
+      <option value="FSD/2510" >FSD/2510</option>
+    
+      <option value="Fast Charge" >Fast Charge</option>
+    
+      <option value="Flat Deck" >Flat Deck</option>
+    
+      <option value="Flat Deck AC" >Flat Deck AC</option>
+    
+      <option value="Fully Built 2770" >Fully Built 2770</option>
+    
+      <option value="Gold ZX 2WD" >Gold ZX 2WD</option>
+    
+      <option value="HD" >HD</option>
+    
+      <option value="HD/16 FT" >HD/16 FT</option>
+    
+      <option value="HDLB" >HDLB</option>
+    
+      <option value="HDLB 3800" >HDLB 3800</option>
+    
+      <option value="HSD" >HSD</option>
+    
+      <option value="HSD 2750" >HSD 2750</option>
+    
+      <option value="HSD 2770" >HSD 2770</option>
+    
+      <option value="HSD 3310" >HSD 3310</option>
+    
+      <option value="HSD 3320" >HSD 3320</option>
+    
+      <option value="HSD 3400" >HSD 3400</option>
+    
+      <option value="HSD 3450" >HSD 3450</option>
+    
+      <option value="HSD 3800" >HSD 3800</option>
+    
+      <option value="HSD 3920" >HSD 3920</option>
+    
+      <option value="HSD 4000" >HSD 4000</option>
+    
+      <option value="HSD 4100" >HSD 4100</option>
+    
+      <option value="HSD 4200" >HSD 4200</option>
+    
+      <option value="HSD 4500" >HSD 4500</option>
+    
+      <option value="HSD 4530" >HSD 4530</option>
+    
+      <option value="HSD 4830" >HSD 4830</option>
+    
+      <option value="HSD 4900" >HSD 4900</option>
+    
+      <option value="HSD 4920" >HSD 4920</option>
+    
+      <option value="HSD 4950" >HSD 4950</option>
+    
+      <option value="HSD 5100" >HSD 5100</option>
+    
+      <option value="HSD 5300" >HSD 5300</option>
+    
+      <option value="HSD 5450" >HSD 5450</option>
+    
+      <option value="HSD/3320 (12 Ft)" >HSD/3320 (12 Ft)</option>
+    
+      <option value="HSD/3425" >HSD/3425</option>
+    
+      <option value="HSD/3850 (14 Ft)" >HSD/3850 (14 Ft)</option>
+    
+      <option value="HSD/3850 (17 Ft)" >HSD/3850 (17 Ft)</option>
+    
+      <option value="HSD/3955" >HSD/3955</option>
+    
+      <option value="HSD/4350 (20 Ft)" >HSD/4350 (20 Ft)</option>
+    
+      <option value="HSD/4500" >HSD/4500</option>
+    
+      <option value="HSD/4800 (22Ft)" >HSD/4800 (22Ft)</option>
+    
+      <option value="HSD/4900" >HSD/4900</option>
+    
+      <option value="Jeeto L6" >Jeeto L6</option>
+    
+      <option value="LE" >LE</option>
+    
+      <option value="LR/Electric" >LR/Electric</option>
+    
+      <option value="LS" >LS</option>
+    
+      <option value="LX" >LX</option>
+    
+      <option value="Maxx" >Maxx</option>
+    
+      <option value="POL CBC/4250" >POL CBC/4250</option>
+    
+      <option value="Petrol" >Petrol</option>
+    
+      <option value="Petrol CX" >Petrol CX</option>
+    
+      <option value="Petrol Cab Chassis" >Petrol Cab Chassis</option>
+    
+      <option value="Petrol Standard" >Petrol Standard</option>
+    
+      <option value="Plus" >Plus</option>
+    
+      <option value="Plus CNG" >Plus CNG</option>
+    
+      <option value="Plus Diesel" >Plus Diesel</option>
+    
+      <option value="Plus Petrol" >Plus Petrol</option>
+    
+      <option value="Pusher Axle/6750" >Pusher Axle/6750</option>
+    
+      <option value="RMC" >RMC</option>
+    
+      <option value="Reefers" >Reefers</option>
+    
+      <option value="Reefers 3800" >Reefers 3800</option>
+    
+      <option value="Reefers 4920" >Reefers 4920</option>
+    
+      <option value="Rock Body - 14 Cum" >Rock Body - 14 Cum</option>
+    
+      <option value="Rock body" >Rock body</option>
+    
+      <option value="Rock/18 Cum" >Rock/18 Cum</option>
+    
+      <option value="Rock/23 Cum" >Rock/23 Cum</option>
+    
+      <option value="S6 16" >S6 16</option>
+    
+      <option value="SR/Electric" >SR/Electric</option>
+    
+      <option value="STD" >STD</option>
+    
+      <option value="SWT" >SWT</option>
+    
+      <option value="Samrat GS/3335" >Samrat GS/3335</option>
+    
+      <option value="Samrat GS/4240" >Samrat GS/4240</option>
+    
+      <option value="Samrat GS/4760" >Samrat GS/4760</option>
+    
+      <option value="Sartaj/2515" >Sartaj/2515</option>
+    
+      <option value="Scoop body" >Scoop body</option>
+    
+      <option value="Single Cab" >Single Cab</option>
+    
+      <option value="Single Cab 4x4" >Single Cab 4x4</option>
+    
+      <option value="Single Cab VX" >Single Cab VX</option>
+    
+      <option value="Standard" >Standard</option>
+    
+      <option value="Strong CNG" >Strong CNG</option>
+    
+      <option value="Strong Diesel" >Strong Diesel</option>
+    
+      <option value="Super GS/4240" >Super GS/4240</option>
+    
+      <option value="Super Strong Cab Chassis" >Super Strong Cab Chassis</option>
+    
+      <option value="Super Strong Flat Deck" >Super Strong Flat Deck</option>
+    
+      <option value="Tag Axle/6255" >Tag Axle/6255</option>
+    
+      <option value="Tanker 5175/CBC/Sleeper" >Tanker 5175/CBC/Sleeper</option>
+    
+      <option value="Tanker 5900/CBC/Mid Cab Sleeper" >Tanker 5900/CBC/Mid Cab Sleeper</option>
+    
+      <option value="Tanker 6375/CBC/Sleeper" >Tanker 6375/CBC/Sleeper</option>
+    
+      <option value="Tanker 6575/CBC/Mid Cab Sleeper" >Tanker 6575/CBC/Mid Cab Sleeper</option>
+    
+      <option value="Tanker 6775/CBC/Mid Cab Sleeper" >Tanker 6775/CBC/Mid Cab Sleeper</option>
+    
+      <option value="Tanker 6775/CBC/Sleeper" >Tanker 6775/CBC/Sleeper</option>
+    
+      <option value="Tractor" >Tractor</option>
+    
+      <option value="V1 Delivery Van" >V1 Delivery Van</option>
+    
+      <option value="V1 FSD" >V1 FSD</option>
+    
+      <option value="V2 Delivery Van" >V2 Delivery Van</option>
+    
+      <option value="V2 FSD" >V2 FSD</option>
+    
+      <option value="VX" >VX</option>
+    
+      <option value="ZX" >ZX</option>
+    
+      <option value="container" >container</option>
+    
+      <option value="container 3400" >container 3400</option>
+    
+      <option value="container 3800" >container 3800</option>
+    
+      <option value="container 4200" >container 4200</option>
+    
+      <option value="container 4530" >container 4530</option>
+    
+      <option value="container 4830" >container 4830</option>
+    
+      <option value="container 4920" >container 4920</option>
+    
+      <option value="load body" >load body</option>
+    
+  </select>
+
+  <select name="fuel" class="border rounded px-3 py-2">
+    <option value="">All Fuel Types</option>
+    
+      <option value="CNG" >CNG</option>
+    
+      <option value="CNG + Petrol" >CNG + Petrol</option>
+    
+      <option value="CNG and Petrol" >CNG and Petrol</option>
+    
+      <option value="CNG+Petrol" >CNG+Petrol</option>
+    
+      <option value="CNG+petrol" >CNG+petrol</option>
+    
+      <option value="Diesel" >Diesel</option>
+    
+      <option value="Electric" >Electric</option>
+    
+      <option value="Hydrogen" >Hydrogen</option>
+    
+      <option value="LNG" >LNG</option>
+    
+      <option value="Petrol" >Petrol</option>
+    
+      <option value="diesel" >diesel</option>
+    
+  </select>
+
+  <select name="sort" class="border rounded px-3 py-2">
+    <option value="asc" selected>Sort A-Z</option>
+    <option value="desc" >Sort Z-A</option>
+  </select>
+
+  <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-900 transition">Apply</button>
+</form>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  
+  <a href="/model/1009g%20lpt" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">FSD 4920 1009g LPT</h2>
+      <p class="text-gray-600 text-sm">GVW: 9600 | Fuel: CNG</p>
+      <p class="text-gray-600 text-sm">Mileage: nan | HP: 83</p>
+    </div>
+  </a>
+  
+  <a href="/model/1012%20lpt" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">Container 3400 1012 LPT</h2>
+      <p class="text-gray-600 text-sm">GVW: 9600 | Fuel: Diesel</p>
+      <p class="text-gray-600 text-sm">Mileage: nan | HP: 123</p>
+    </div>
+  </a>
+  
+  <a href="/model/1015r" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Popular</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">3360/CBC 1015R</h2>
+      <p class="text-gray-600 text-sm">GVW: 10600 | Fuel: Diesel</p>
+      <p class="text-gray-600 text-sm">Mileage: nan | HP: 147</p>
+    </div>
+  </a>
+  
+  <a href="/model/1015r%20plus" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">3360/CAB/14.6(ft) 1015R Plus</h2>
+      <p class="text-gray-600 text-sm">GVW: 10700 | Fuel: Diesel</p>
+      <p class="text-gray-600 text-sm">Mileage: nan | HP: 147</p>
+    </div>
+  </a>
+  
+  <a href="/model/1109g%20lpt" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">Container 4920 1109g LPT</h2>
+      <p class="text-gray-600 text-sm">GVW: 10900 | Fuel: CNG</p>
+      <p class="text-gray-600 text-sm">Mileage: nan | HP: 83</p>
+    </div>
+  </a>
+  
+  <a href="/model/1112%20lpt" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">container 4530 1112 LPT</h2>
+      <p class="text-gray-600 text-sm">GVW: 10900 | Fuel: Diesel</p>
+      <p class="text-gray-600 text-sm">Mileage: nan | HP: 123</p>
+    </div>
+  </a>
+  
+  <a href="/model/1117r" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">CBC/3360 1117R</h2>
+      <p class="text-gray-600 text-sm">GVW: 11120 | Fuel: Diesel</p>
+      <p class="text-gray-600 text-sm">Mileage: 05-Jun | HP: 167</p>
+    </div>
+  </a>
+  
+  <a href="/model/1212%20lpk" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">3000/CBC 1212 LPK</h2>
+      <p class="text-gray-600 text-sm">GVW: 11990 | Fuel: Diesel</p>
+      <p class="text-gray-600 text-sm">Mileage: nan | HP: 123</p>
+    </div>
+  </a>
+  
+  <a href="/model/1212%20lpt" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">Container 1212 LPT</h2>
+      <p class="text-gray-600 text-sm">GVW: 11900 | Fuel: Diesel</p>
+      <p class="text-gray-600 text-sm">Mileage: nan | HP: 127</p>
+    </div>
+  </a>
+  
+  <a href="/model/1215r" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Popular</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">4250/CBC 1215R</h2>
+      <p class="text-gray-600 text-sm">GVW: 11990 | Fuel: Diesel</p>
+      <p class="text-gray-600 text-sm">Mileage: nan | HP: 147</p>
+    </div>
+  </a>
+  
+  <a href="/model/1215re" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">3360/CBC 1215RE</h2>
+      <p class="text-gray-600 text-sm">GVW: 12800 | Fuel: Diesel</p>
+      <p class="text-gray-600 text-sm">Mileage: nan | HP: 147</p>
+    </div>
+  </a>
+  
+  <a href="/model/1216%20lpt" class="relative bg-white shadow rounded-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300">
+    <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Image</div>
+    
+    <div class="p-4">
+      <h2 class="font-semibold text-lg">3920/Cab 1216 LPT</h2>
+      <p class="text-gray-600 text-sm">GVW: 11990 | Fuel: Diesel</p>
+      <p class="text-gray-600 text-sm">Mileage: 5.5-6.5 | HP: 158 HP (160Ps) @ 2600 r/min (Heavy Mode) | 123 HP (125Ps) @ 2600 r/min (Light Mode)</p>
+    </div>
+  </a>
+  
+</div>
+
+<div class="flex justify-center mt-6 gap-2">
+  
+  <span class="px-3 py-1 border rounded bg-gray-200">1</span>
+  
+  <a href="?search=&brand=&fuel=&sort=asc&page=2" class="px-3 py-1 border rounded hover:bg-gray-200">Next</a>
+  
+</div>
+
+
+</div>
+
+</body>
+</html>

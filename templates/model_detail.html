@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+{% block content %}
+<a href="/" class="text-blue-700 mb-4 inline-block hover:underline">← Back to Models</a>
+<h1 class="text-2xl font-bold mb-4">{{variants[0][brand_col]}} {{variants[0]['modelName']}}</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {% for v in variants %}
+  <a href="/variant/{{v[variant_col]}}" class="bg-white p-4 shadow rounded hover:shadow-2xl transition">
+    <h2 class="font-semibold">{{v[variant_col]}}</h2>
+    <p class="text-sm text-gray-600">GVW: {{v.get(gvw_col,'')}} | Fuel: {{v.get(fuel_col,'')}}</p>
+    <p class="text-sm text-gray-600">Mileage: {{v.get(mileage_col,'')}} | HP: {{v.get(power_col,'')}}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}
