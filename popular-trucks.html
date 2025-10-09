@@ -3,75 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrucksFarm:Popular Trucks</title>
-    <!-- Bootstrap for responsive grid and styling -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Popular Trucks - TrucksFarm</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
     <!-- PapaParse for CSV parsing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        .truck-card { border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .truck-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; }
-        .truck-card h5 { margin: 10px 0; }
-        .truck-card p { margin: 5px 0; color: #555; }
-        .filters { margin-bottom: 30px; }
-        .pagination { margin-top: 20px; }
-    </style>
 </head>
 <body>
-    <h1>Popular Trucks in India</h1>
-    <div class="filters row">
-        <div class="col-md-3">
-            <label>Brand:</label>
-            <select id="brandFilter" class="form-select">
-                <option value="">All</option>
-            </select>
+    <header>
+        <div class="container flex justify-between items-center">
+            <div class="logo">
+                <img src="https://via.placeholder.com/150x50?text=TrucksFarm" alt="TrucksFarm Logo">
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="popular-trucks.html">Popular Trucks</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
         </div>
-        <div class="col-md-3">
-            <label>Fuel Type:</label>
-            <select id="fuelFilter" class="form-select">
-                <option value="">All</option>
-            </select>
-        </div>
-        <div class="col-md-3">
-            <label>GVW Range (kg):</label>
-            <input type="number" id="minGVW" placeholder="Min" class="form-control">
-            <input type="number" id="maxGVW" placeholder="Max" class="form-control mt-2">
-        </div>
-        <div class="col-md-3">
-            <label>Sort By:</label>
-            <select id="sortBy" class="form-select">
-                <option value="">None</option>
-                <option value="power-hp">Power (High to Low)</option>
-                <option value="gross-vehicle-weight-kg">GVW (High to Low)</option>
-            </select>
-        </div>
-        <div class="col-md-12 mt-3">
-            <button id="applyFilters" class="btn btn-primary">Apply Filters</button>
-        </div>
-    </div>
+    </header>
 
-    <div id="truckGrid" class="row"></div>
+    <main class="container">
+        <h1>Popular Trucks in India</h1>
+        <section class="filters">
+            <div class="filter-group">
+                <label>Brand:</label>
+                <select id="brandFilter" class="form-select">
+                    <option value="">All</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Fuel Type:</label>
+                <select id="fuelFilter" class="form-select">
+                    <option value="">All</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>GVW Range (kg):</label>
+                <input type="number" id="minGVW" placeholder="Min" class="form-control">
+                <input type="number" id="maxGVW" placeholder="Max" class="form-control">
+            </div>
+            <div class="filter-group">
+                <label>Sort By:</label>
+                <select id="sortBy" class="form-select">
+                    <option value="">None</option>
+                    <option value="power-hp">Power (High to Low)</option>
+                    <option value="gross-vehicle-weight-kg">GVW (High to Low)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <button id="applyFilters" class="btn">Apply Filters</button>
+            </div>
+        </section>
 
-    <div class="pagination d-flex justify-content-center">
-        <nav aria-label="Page navigation">
-            <ul id="pagination" class="pagination"></ul>
+        <section id="truckGrid" class="truck-grid"></section>
+
+        <nav class="pagination">
+            <ul id="pagination" class="pagination-list"></ul>
         </nav>
-    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TrucksFarm.com. All rights reserved.</p>
+        <p>Visit our partners: <a href="https://example.com">example.com</a> | <a href="https://example.com">https://example.com</a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑ Top</button>
 
     <script>
         let allData = [];
         let filteredData = [];
         const itemsPerPage = 10;
         let currentPage = 1;
+        const maxPageNumbers = 4;
+
+        // Handle query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const fuelParam = urlParams.get('fuel');
+        const brandParam = urlParams.get('brand');
 
         // Load CSV
         Papa.parse('TATACSVFILE2.csv', {
             download: true,
             header: true,
             complete: function(results) {
-                allData = results.data.filter(row => row.modelName); // Filter valid rows
+                allData = results.data.filter(row => row.modelName);
                 filteredData = [...allData];
+
+                // Apply query parameters
+                if (fuelParam) document.getElementById('fuelFilter').value = fuelParam;
+                if (brandParam) document.getElementById('brandFilter').value = brandParam;
+                applyFilters();
                 populateFilters();
                 displayTrucks();
             }
@@ -91,7 +115,7 @@
         }
 
         // Apply filters and sort
-        document.getElementById('applyFilters').addEventListener('click', () => {
+        function applyFilters() {
             const selectedBrand = document.getElementById('brandFilter').value;
             const selectedFuel = document.getElementById('fuelFilter').value;
             const minGVW = parseInt(document.getElementById('minGVW').value) || 0;
@@ -108,12 +132,15 @@
             if (sortBy) {
                 filteredData.sort((a, b) => parseInt(b[sortBy]) - parseInt(a[sortBy]));
             }
+        }
 
+        document.getElementById('applyFilters').addEventListener('click', () => {
+            applyFilters();
             currentPage = 1;
             displayTrucks();
         });
 
-        // Display trucks in grid with pagination
+        // Display trucks in grid
         function displayTrucks() {
             const grid = document.getElementById('truckGrid');
             grid.innerHTML = '';
@@ -124,16 +151,15 @@
 
             pageData.forEach(truck => {
                 const card = `
-                    <div class="col-md-4">
-                        <div class="truck-card">
-                            <img src="https://via.placeholder.com/300x150?text=${truck.modelName}" alt="${truck.modelName}">
+                    <div class="truck-card">
+                        <img src="https://via.placeholder.com/300x150?text=${truck.modelName}" alt="${truck.modelName}">
+                        <div>
                             <h5>${truck.modelName} (${truck.name})</h5>
                             <p>Brand: ${truck.brandSlug}</p>
                             <p>Fuel: ${truck['fuel-type']}</p>
                             <p>Power: ${truck['power-hp']} HP</p>
                             <p>GVW: ${truck['gross-vehicle-weight-kg']} kg</p>
                             <p>Engine: ${truck['engine-capacity-cc']} cc</p>
-                            <!-- Add more specs as needed -->
                         </div>
                     </div>
                 `;
@@ -143,16 +169,36 @@
             setupPagination();
         }
 
-        // Setup pagination
+        // Setup pagination with limited numbers and Previous/Next
         function setupPagination() {
             const pagination = document.getElementById('pagination');
             pagination.innerHTML = '';
             const pageCount = Math.ceil(filteredData.length / itemsPerPage);
 
-            for (let i = 1; i <= pageCount; i++) {
+            // Previous button
+            if (currentPage > 1) {
+                const prevLi = document.createElement('li');
+                prevLi.className = 'pagination-btn';
+                prevLi.innerHTML = `<a href="#">Previous</a>`;
+                prevLi.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    currentPage--;
+                    displayTrucks();
+                });
+                pagination.appendChild(prevLi);
+            }
+
+            // Page numbers (show 3-4 at a time)
+            let startPage = Math.max(1, currentPage - Math.floor(maxPageNumbers / 2));
+            let endPage = Math.min(pageCount, startPage + maxPageNumbers - 1);
+            if (endPage - startPage < maxPageNumbers - 1) {
+                startPage = Math.max(1, endPage - maxPageNumbers + 1);
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
                 const li = document.createElement('li');
-                li.className = 'page-item' + (i === currentPage ? ' active' : '');
-                li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+                li.className = `pagination-btn ${i === currentPage ? 'active' : ''}`;
+                li.innerHTML = `<a href="#">${i}</a>`;
                 li.addEventListener('click', (e) => {
                     e.preventDefault();
                     currentPage = i;
@@ -160,8 +206,43 @@
                 });
                 pagination.appendChild(li);
             }
+
+            // Next button
+            if (currentPage < pageCount) {
+                const nextLi = document.createElement('li');
+                nextLi.className = 'pagination-btn';
+                nextLi.innerHTML = `<a href="#">Next</a>`;
+                nextLi.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    currentPage++;
+                    displayTrucks();
+                });
+                pagination.appendChild(nextLi);
+            }
         }
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
